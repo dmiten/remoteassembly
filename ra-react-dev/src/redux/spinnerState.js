@@ -1,7 +1,8 @@
-import { SPINNER, SIGN_IN } from './actionTypes'
+import { SPINNER, SIGN_IN, CALC } from './actionTypes'
 
 const initialState = {
-  SignIn: false
+  SignIn: false,
+  Calculator: false
 }
 
 export const showSpinner = payload => ({ SPINNER, payload })
@@ -14,6 +15,10 @@ const spinnerReducers = {
   [SIGN_IN]: state => ({
     ...state,
     SignIn: true
+  }),
+  [CALC]: state => ({
+    ...state,
+    Calculator: true
   })
 }
 

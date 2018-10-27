@@ -5,7 +5,7 @@ import { insertBuyer, insertUser } from './fake'
 import log from './utils/log'
 
 export default callback => {
-  const mongoAddress = 'mongodb://db:27017/db'
+  const mongoAddress = process.env.MONGOLAB_URI || 'mongodb://db:27017/db'
   mongoose.connect(mongoAddress, { useMongoClient: true })
   mongoose.Promise = global.Promise
 
