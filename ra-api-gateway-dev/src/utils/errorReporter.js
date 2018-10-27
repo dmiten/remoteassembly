@@ -1,4 +1,5 @@
 import errors from '@google-cloud/error-reporting'
+
 import config from './../config'
 
 // Instantiates a client

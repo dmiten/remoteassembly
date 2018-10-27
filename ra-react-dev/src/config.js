@@ -4,7 +4,7 @@ const { TRACKING_ID } = process.env
 
 /* private config items, like keys(e.g. - STACKDRIVER_API_KEY) you can put in .env file */
 let config = {
-  apiServerAddress: 'http://localhost:8080',
+  apiServerAddress: 'http://10.0.0.2:8080',
   /* these keys one can obtain from google credentials json key with stackdriver permissions */
   STACKDRIVER_API_KEY,
   projectId,

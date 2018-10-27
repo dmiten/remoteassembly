@@ -10,6 +10,7 @@ import Drawer from 'material-ui/Drawer'
 import Hidden from 'material-ui/Hidden'
 import { styles } from './theme'
 
+import IsoIcon from 'material-ui-icons/Iso'
 import HomeIcon from 'material-ui-icons/Home'
 import DeleteIcon from 'material-ui-icons/Delete'
 import HelpIcon from 'material-ui-icons/HelpOutline'
@@ -42,6 +43,11 @@ export class ResponsiveDrawer extends Component {
           label: 'Dialog',
           Icon: FeaturedVideoIcon,
           onClick: () => push('/dialog')
+        },
+        {
+          label: 'Calculator',
+          Icon: IsoIcon,
+          onClick: () => push('/calculator')
         }
       ],
       bottom: [

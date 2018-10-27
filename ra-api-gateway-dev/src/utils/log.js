@@ -1,5 +1,6 @@
-import config from '../config'
 import moment from 'moment-timezone'
+
+import config from '../config'
 import errorReporter from '../utils/errorReporter'
 import logReporter, { LogSeverity } from '../utils/logReporter'
 const tz = 'America/New_York'
@@ -19,7 +20,7 @@ export default {
     // Prepares a log entry
     const entry = logReporter.entry(metadata, text)
     try {
-      await logReporter.write(entry)
+      // await logReporter.write(entry)
       console.log(`${now()} | INFO ${text}`)
     } catch (error) {
       console.error('ERROR:', text)
@@ -35,10 +36,10 @@ export default {
       // Prepares a log entry
       const entry = logReporter.entry(metadata, text)
       try {
-        await logReporter.write(entry)
+        // await logReporter.write(entry)
         console.log(`${now()} | DEBUG ${text}`)
       } catch (error) {
-        console.error('ERROR:', text)
+        console.error('ERROR:', error.message, text)
       }
     }
   },
@@ -51,7 +52,7 @@ export default {
     // Prepares a log entry
     const entry = logReporter.entry(metadata, text)
     try {
-      await logReporter.write(entry)
+      // await logReporter.write(entry)
       console.log(`${now()} | ERR ${text}`)
     } catch (error) {
       console.error('ERROR:', text)
